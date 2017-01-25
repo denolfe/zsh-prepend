@@ -8,6 +8,6 @@ prepend () {
         { echo "$1"; cat "$2"; } > .prependtemp && mv -f .prependtemp "$2"
     else
         echo "'$2' is not a valid file"
-        exit 1
+        return 1
     fi
 }
